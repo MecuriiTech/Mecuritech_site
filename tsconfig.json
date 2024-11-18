@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node", // Change this to "node"
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".", // Add this for better path resolution
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ], // Your existing alias setup
+      "@assets/*": [
+        "./src/assets/*"
+      ], // Add path alias for assets
+      "@components/*": [
+        "./src/components/*"
+      ] // Add path alias for components (optional)
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts ",
+    "src/custom.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
